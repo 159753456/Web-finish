@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>大觉山</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+</head>
+
+<body>
+<nav>
+		   <div align="left"> 
+		   <img src="logo.png" width="185" height="57" alt=""/>
+  </div>
+        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: space-around;">
+            <li style="display: flex; justify-content: center;"><a href="index.html" id="home-text">主页</a></li>
+            <li style="display: flex; justify-content: center;"><a href="bread.html" id="about-text1">面包之乡&nbsp;</a></li>
+            <li style="display: flex; justify-content: center;"><a href="forest.html" id="about-text1">翠竹成林&nbsp;</a></li> 
+			<li style="display: flex; justify-content: center;"><a href="travel.html" id="about-text1">大觉山&nbsp;</a></li> 
+			<li style="display: flex; justify-content: center;"><a href="river.html" id="about-text1">漂流之旅&nbsp;</a></li> 
+		  <li style="display: flex; justify-content: center;"><a href="games.html" id="about-text1">特色民俗&nbsp;</a></li>
+		  <span style="display: flex; justify-content: center;"><a href="about.html" id="about-text">关于</a></span>  
+  </ul>
+	<div style="display: flex; justify-content: center;">
+     <svg fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="iconButton" id="themeSwitcher" 
+                style="overflow: visible;" onclick="toggleTheme()">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path
+                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                </path>
+      </svg>
+    </div>
+</nav>
+    <div class="Window" , id="main" , style="width: 80%; padding: 2%;margin-bottom: 40px;  margin-top: 2%;">
+        <p id="title" style="font-size: 28px">穿山攀岩——你怎么知道大觉山“悬崖动车”是全国首创</p>
+        <hr
+            style="border: 0; height: 1px; background-image: linear-gradient(to right, var(--text-color), var(--bg-color));">
+        <p id="p-func">悬崖动车运行高度约海拔1200米，线路总长11.8公里，日最大运载量2.5万人。</p>
+        <ul id="item-func">
+            <li>什么是“悬崖动车”？</li>
+			<div>&nbsp; &nbsp; &nbsp; 除肉眼可见的外观形似动车组外，株洲中车特种装备科技有限公司总工程师晋军辉还骄傲地介绍到：“它的基本工作原理、形式和我们大家平时所知道的火车相似，特别之处就在于这个‘悬崖动车’可以上山。高架轨道贴着大觉山的悬崖峭壁，给游客一个全新视角。”</div>
+			<div align="center">
+				<img src="travel/1.png" width="475" height="354"  alt="面包之乡"/> </div>
+            <li>奇妙的出行体验</li>
+			<div>&nbsp; &nbsp; &nbsp; “酷、险、奇”等特点集于一身，大觉山“悬崖动车”项目全线路均“嵌”于半山腰上，其中三分之一以上线路在悬崖峭壁旁，让游客置身海拔850米到1150米高空，在危崖上爬坡，在群峰间穿行。</div>
+			<div>&nbsp; &nbsp; &nbsp; “如果遇到阴雨天气，山间云雾缭绕，乘坐‘悬崖动车’穿云而出，又仿佛来到‘仙侠世界’。”</div>
+			<div align="center">
+				<img src="travel/2.png" width="475" height="354"  alt="面包之乡"/> </div>
+            <li>一览众山小</li>
+			<div>&nbsp; &nbsp; &nbsp; 行进途中，青山苍翠、云卷云舒尽收眼底；低头俯瞰，峡谷漂流、高空缆车点缀山间，游览线路将大觉寺、蝴蝶谷、天街等多个景区站点串珠成链。</div>
+			<div align="center">
+				<img src="travel/3.png" width="475" height="354"  alt="面包之乡"/> </div>
+            <li>体验感十足的“悬崖动车”如何给乘客安全感？</li>
+			<div>&nbsp; &nbsp; &nbsp; 为适应大觉山险峻地形，中国中车开发了原创的铰接式转向架和齿轨技术，适应于大坡度小曲径工况，在提高列车曲线通过性能的同时，进一步保证其爬坡能力。</div>
+			<div>&nbsp; &nbsp; &nbsp; 此外，列车全系标配了红外线防撞系统，确保车辆运行安全可靠。</div>
+			<div align="center">
+				<img src="travel/4.png" width="475" height="314"  alt="面包之乡"/> </div>
+			<p align="center">部分图片取自新华社</p>
+			</div>
+</body>
+<script>
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+    // 如果是手机设备，修改样式
+    document.querySelector('body').style.backgroundImage = 'url("Wallpaper-Mobile.png")'; // 修改背景图片
+    document.getElementById('themeSwitcher').style.scale = '2'; // 修改主题切换按钮大小
+    document.getElementById('title').style.fontSize = '48px'; // 修改标题字体大小
+    document.getElementById('p-func').style.fontSize = '32px'; // 修改功能列表标题字体大小
+    document.getElementById('item-func').style.fontSize = '32px'; // 修改功能列表字体大小
+    document.getElementById('home-text').style.fontSize = '48px'; // 修改导航栏字体大小
+    document.getElementById('about-text').style.fontSize = '48px'; // 修改导航栏字体大小
+    document.getElementById('login-title').style.fontSize = '64px'; // 修改标题字体大小
+    document.getElementById('main').style.marginTop = '30%'; // 修改窗口上边距
+    document.getElementById('main').style.width = '80%'; // 修改窗口宽度
+    document.getElementById('main').style.height = 0.55 * height + 'px'; // 修改窗口高度
+    document.getElementById('main').style.maxWidth = '2048px'; // 修改窗口最大宽度
+}
+</script>
+
+</html>
